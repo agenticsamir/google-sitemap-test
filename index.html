@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: Title & Description -->
+  <title>Google Sitemap Test — Samir Gupta</title>
+  <meta name="description" content="A minimal test site to verify Google Search Console sitemap indexing and crawlability. Built as a controlled SEO experiment." />
+
+  <!-- SEO: Canonical URL -->
+  <link rel="canonical" href="https://agenticsamir.github.io/google-sitemap-test/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Google Sitemap Test" />
+  <meta property="og:description" content="A minimal test site to verify Google Search Console sitemap indexing and crawlability." />
+  <meta property="og:url" content="https://agenticsamir.github.io/google-sitemap-test/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: #1e1e2e;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --text: #e2e2f0;
+      --muted: #6b6b8a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .glow-ring {
+      position: fixed;
+      top: -200px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3rem 3.5rem;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 60px rgba(108,99,255,0.08), 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(108,99,255,0.15);
+      border: 1px solid rgba(108,99,255,0.3);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .checklist {
+      list-style: none;
+      text-align: left;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .check { color: var(--accent2); font-size: 1rem; }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .link-btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .link-btn.primary:hover { background: #5a52e0; transform: translateY(-1px); }
+
+    .link-btn.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .link-btn.secondary:hover { border-color: var(--accent); color: var(--text); transform: translateY(-1px); }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="glow-ring"></div>
+
+  <div class="card">
+    <div class="badge">SEO Test Experiment</div>
+
+    <h1>Google Sitemap Test</h1>
+
+    <p class="subtitle">
+      A minimal, controlled test site for verifying Google Search Console
+      sitemap indexing, crawlability, and URL discovery.
+    </p>
+
+    <ul class="checklist" aria-label="SEO Configuration Checklist">
+      <li><span class="check">✓</span> <strong>sitemap.xml</strong> — standard XML sitemap at root</li>
+      <li><span class="check">✓</span> <strong>robots.txt</strong> — references sitemap, allows all bots</li>
+      <li><span class="check">✓</span> <strong>Canonical URL</strong> — set to GitHub Pages domain</li>
+      <li><span class="check">✓</span> <strong>Meta robots</strong> — index, follow</li>
+      <li><span class="check">✓</span> <strong>Open Graph</strong> — title, description, URL</li>
+      <li><span class="check">✓</span> <strong>Structured heading hierarchy</strong> — single H1</li>
+    </ul>
+
+    <div class="links">
+      <a href="/google-sitemap-test/sitemap.xml" class="link-btn primary" id="view-sitemap">📄 View Sitemap</a>
+      <a href="/google-sitemap-test/robots.txt" class="link-btn secondary" id="view-robots">🤖 View robots.txt</a>
+    </div>
+
+    <footer>
+      <p>Deployed via GitHub Pages &bull;
+        <a href="https://github.com/agenticsamir/google-sitemap-test" target="_blank" rel="noopener">View source on GitHub</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
